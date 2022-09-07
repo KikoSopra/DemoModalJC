@@ -13,21 +13,20 @@
 <p-dialog
   [(visible)]="display"
   [draggable]="false"
-  header="Prueba dialogo 2"
   [transitionOptions]="'200ms'"
-  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [breakpoints]="{ '960px': '90vw', '640px': '100vw' }"
   [style]="{ width: '90vw' }"
 >
   <p-table
     #dt1
     [value]="customers"
-    [rows]="5"
+    [rows]="10"
     [showCurrentPageReport]="true"
-    [rowsPerPageOptions]="[5, 10, 25, 50]"
+    [rowsPerPageOptions]="[10, 25, 50]"
     [loading]="loading"
     styleClass="p-datatable-gridlines"
     [paginator]="true"
-    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    currentPageReportTemplate="Mostrando de {first} a {last} de un total de {totalRecords} registros"
     [globalFilterFields]="[
       'name',
       'country.name',
@@ -40,9 +39,26 @@
     (onRowSelect)="onRowSelect($event)"
     (onRowUnselect)="onRowUnselect($event)"
   >
-    <!-- Primera fila -->
     <ng-template pTemplate="caption">
-      <div class="flex">
+      <div class="camposBusqueda flex">
+        <span class="p-float-label">
+          <input id="float-input" type="text" pInputText />
+          <label for="float-input">Name</label>
+        </span>
+        <span class="p-float-label">
+          <input id="float-input" type="text" pInputText />
+          <label for="float-input">Country</label>
+        </span>
+        <span class="p-float-label">
+          <input id="float-input" type="text" pInputText />
+          <label for="float-input">Agent</label>
+        </span>
+        <span class="p-float-label">
+          <input id="float-input" type="number" pInputText />
+          <label for="float-input">Balance</label>
+        </span>
+      </div>
+      <div class="flex botones">
         <button
           pButton
           label="Limpiar filtros"
@@ -50,10 +66,15 @@
           icon="pi pi-filter-slash"
           (click)="clear(dt1)"
         ></button>
+        <button
+          pButton
+          label="Cargar datos"
+          class="p-button"
+          icon="pi pi-download"
+          (click)="loadData()"
+        ></button>
       </div>
     </ng-template>
-
-    <!-- Segunda fila -->
     <ng-template pTemplate="header">
       <tr>
         <th>Name</th>
@@ -65,7 +86,6 @@
         <th>Activity</th>
         <th style="width: 6rem">Verified</th>
       </tr>
-      <!-- Tercera fila -->
       <tr>
         <th>
           <p-columnFilter type="text" field="name"></p-columnFilter>
@@ -144,7 +164,6 @@
           <p-columnFilter type="boolean" field="verified"></p-columnFilter>
         </th>
       </tr>
-      <!-- Cuarta fila -->
     </ng-template>
     <ng-template pTemplate="body" let-customer>
       <tr [pSelectableRow]="customer">
@@ -185,11 +204,14 @@
         </td>
       </tr>
     </ng-template>
+
     <ng-template pTemplate="emptymessage">
       <tr>
-        <td colspan="7">No customers found.</td>
+        <td colspan="7">No hay datos cargados.</td>
       </tr>
     </ng-template>
+
+    <!-- Cuarta fila -->
   </p-table>
   <button
     pButton

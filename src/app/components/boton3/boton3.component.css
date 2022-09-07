@@ -10,3 +10,11 @@
     align-content: center;
   }
 
+.camposBusqueda {
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.camposBusqueda > span {
+  margin-right: 0.8rem;
+}

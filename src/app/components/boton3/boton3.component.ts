@@ -7,8 +7,6 @@ import { MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { PrimeNGConfig } from 'primeng/api';
 
-import { DataService } from 'src/app/data.service';
-
 @Component({
   selector: 'app-boton3',
   templateUrl: './boton3.component.html',
@@ -26,23 +24,19 @@ export class Boton3Component implements OnInit {
   representatives!: Representative[];
   statuses!: any[];
   loading: boolean = true;
+  dataLoaded: boolean = false;
   activityValues: number[] = [0, 100];
 
   constructor(
     private config: PrimeNGConfig,
     private messageService: MessageService,
-    private dataService: DataService,
     private customerService: CustomerService
   ) {}
 
   ngOnInit() {
     this.config.ripple = true;
-    this.customerService.getCustomersLarge().then((customers) => {
-      this.customers = customers;
-      this.loading = false;
-
-      this.customers.forEach((customer) => (customer.date = new Date()));
-    });
+    this.loading = false;
+    console.log(this.dataLoaded);
 
     this.representatives = [
       { name: 'Amy Elsner', image: 'amyelsner.png' },
@@ -149,16 +143,21 @@ export class Boton3Component implements OnInit {
     });
   }
 
+  loadData() {
+    this.customerService.getCustomersLarge().then((customers) => {
+      this.customers = customers;
+      this.loading = false;
+      this.customers.forEach((customer) => (customer.date = new Date()));
+    });
+    this.dataLoaded = true;
+  }
+
   showResponsiveDialog() {
-    console.log(this.display);
     this.display = true;
-    console.log(this.display);
   }
 
   hideResponsiveDialog() {
-    console.log(this.display);
     this.display = false;
-    console.log(this.display);
   }
 
   clear(table: Table) {
@@ -169,7 +168,7 @@ export class Boton3Component implements OnInit {
     this.messageService.add({
       severity: 'success',
       summary: 'Customer Selected',
-      detail: event.data.name
+      detail: event.data.name,
     });
     console.log(event.data);
     this.name = event.data.name;
