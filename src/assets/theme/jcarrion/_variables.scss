@@ -1,0 +1,769 @@
+// Colors
+$primaryColor: #2196f3;
+$primaryTextColor: #ffffff;
+$primaryDarkColor: darken($primaryColor, 6%);
+$primaryDarkerColor: darken($primaryColor, 10%);
+
+// General
+$fontFamily: 'Nunito Sans', sans-serif;
+$fontSize: 1rem;
+$fontWeight: normal;
+$textColor: #495057;
+$textSecondaryColor: #6c757d;
+$highlightBg: $primaryColor;
+$highlightTextColor: $primaryTextColor;
+$borderRadius: 3px;
+$transitionDuration: 0.2s;
+$formElementTransition: background-color $transitionDuration,
+  color $transitionDuration, border-color $transitionDuration,
+  box-shadow $transitionDuration;
+$actionIconTransition: background-color $transitionDuration,
+  color $transitionDuration, box-shadow $transitionDuration;
+$listItemTransition: background-color $transitionDuration,
+  border-color $transitionDuration, box-shadow $transitionDuration;
+$primeIconFontSize: 1rem;
+$divider: 1px solid #dee2e6;
+$inlineSpacing: 0.5rem;
+$disabledOpacity: 0.8;
+$maskBg: rgba(0, 0, 0, 0.4);
+$loadingIconFontSize: 2rem;
+$errorColor: #e4677e;
+$focusOutlineColor: lighten($primaryColor, 27%);
+$focusOutline: 0 none;
+$focusOutlineOffset: 0;
+$focusShadow: 0 0 0 0.2rem $focusOutlineColor;
+$actionIconWidth: 2rem;
+$actionIconHeight: 2rem;
+$actionIconBg: transparent;
+$actionIconBorder: 0 none;
+$actionIconColor: $textSecondaryColor;
+$actionIconHoverBg: #e9ecef;
+$actionIconHoverBorderColor: transparent;
+$actionIconHoverColor: $textColor;
+$actionIconBorderRadius: 50%;
+$scaleSM: 0.875;
+$scaleLG: 1.25;
+
+// Buton;
+$buttonPadding: 0.5rem 1rem;
+$buttonIconOnlyWidth: 2.357rem;
+$buttonIconOnlyPadding: 0.5rem 0;
+$buttonBg: $primaryColor;
+$buttonTextColor: $primaryTextColor;
+$buttonBorder: 1px solid $primaryColor;
+$buttonHoverBg: $primaryDarkColor;
+$buttonTextHoverColor: $primaryTextColor;
+$buttonHoverBorderColor: $primaryDarkColor;
+$buttonActiveBg: $primaryDarkerColor;
+$buttonTextActiveColor: $primaryTextColor;
+$buttonActiveBorderColor: $primaryDarkerColor;
+
+// raisedButton
+$raisedButtonShadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+  0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+// roundedButton
+$roundedButtonBorderRadius: 2rem;
+
+// textButton
+$textButtonHoverBgOpacity: 0.04;
+$textButtonActiveBgOpacity: 0.16;
+
+// outlinedButton
+$outlinedButtonBorder: 1px solid;
+
+// plainButton
+$plainButtonTextColor: #6c757d;
+$plainButtonHoverBgColor: #e9ecef;
+$plainButtonActiveBgColor: #dee2e6;
+
+// secondaryButton
+$secondaryButtonBg: #607d8b;
+$secondaryButtonTextColor: #ffffff;
+$secondaryButtonBorder: 1px solid #607d8b;
+$secondaryButtonHoverBg: #546e7a;
+$secondaryButtonTextHoverColor: #ffffff;
+$secondaryButtonHoverBorderColor: #546e7a;
+$secondaryButtonActiveBg: #455a64;
+$secondaryButtonTextActiveColor: #ffffff;
+$secondaryButtonActiveBorderColor: #455a64;
+$secondaryButtonFocusShadow: 0 0 0 0.2rem #b0bec5;
+
+// infoButton
+$infoButtonBg: #03a9f4;
+$infoButtonTextColor: #ffffff;
+$infoButtonBorder: 1px solid #03a9f4;
+$infoButtonHoverBg: #039be5;
+$infoButtonTextHoverColor: #ffffff;
+$infoButtonHoverBorderColor: #039be5;
+$infoButtonActiveBg: #0288d1;
+$infoButtonTextActiveColor: #ffffff;
+$infoButtonActiveBorderColor: #0288d1;
+$infoButtonFocusShadow: 0 0 0 0.2rem lighten($infoButtonBg, 35%);
+
+// successButton
+$successButtonBg: #4caf50;
+$successButtonTextColor: #ffffff;
+$successButtonBorder: 1px solid #4caf50;
+$successButtonHoverBg: #43a047;
+$successButtonTextHoverColor: #ffffff;
+$successButtonHoverBorderColor: #43a047;
+$successButtonActiveBg: #388e3c;
+$successButtonTextActiveColor: #ffffff;
+$successButtonActiveBorderColor: #388e3c;
+$successButtonFocusShadow: 0 0 0 0.2rem lighten($successButtonBg, 35%);
+
+// warningButton
+$warningButtonBg: #ffc107;
+$warningButtonTextColor: $textColor;
+$warningButtonBorder: 1px solid #ffc107;
+$warningButtonHoverBg: #ffb300;
+$warningButtonTextHoverColor: $textColor;
+$warningButtonHoverBorderColor: #ffb300;
+$warningButtonActiveBg: #ffa000;
+$warningButtonTextActiveColor: $textColor;
+$warningButtonActiveBorderColor: #ffa000;
+$warningButtonFocusShadow: 0 0 0 0.2rem lighten($warningButtonBg, 35%);
+
+// helpButton
+$helpButtonBg: #9c27b0;
+$helpButtonTextColor: #ffffff;
+$helpButtonBorder: 1px solid #9c27b0;
+$helpButtonHoverBg: #8e24aa;
+$helpButtonTextHoverColor: #ffffff;
+$helpButtonHoverBorderColor: #8e24aa;
+$helpButtonActiveBg: #7b1fa2;
+$helpButtonTextActiveColor: #ffffff;
+$helpButtonActiveBorderColor: #7b1fa2;
+$helpButtonFocusShadow: 0 0 0 0.2rem #ce93d8;
+
+// dangerButton
+$dangerButtonBg: #f44336;
+$dangerButtonTextColor: #ffffff;
+$dangerButtonBorder: 1px solid #f44336;
+$dangerButtonHoverBg: #e53935;
+$dangerButtonTextHoverColor: #ffffff;
+$dangerButtonHoverBorderColor: #e53935;
+$dangerButtonActiveBg: #d32f2f;
+$dangerButtonTextActiveColor: #ffffff;
+$dangerButtonActiveBorderColor: #d32f2f;
+$dangerButtonFocusShadow: 0 0 0 0.2rem lighten($dangerButtonBg, 35%);
+
+// linkButton
+$linkButtonColor: $primaryDarkerColor;
+$linkButtonHoverColor: $primaryDarkerColor;
+$linkButtonTextHoverDecoration: underline;
+$linkButtonFocusShadow: 0 0 0 0.2rem $focusOutlineColor;
+
+// toggleButton
+$toggleButtonBg: #ffffff;
+$toggleButtonBorder: 1px solid #ced4da;
+$toggleButtonTextColor: $textColor;
+$toggleButtonIconColor: $textSecondaryColor;
+$toggleButtonHoverBg: #e9ecef;
+$toggleButtonHoverBorderColor: #ced4da;
+$toggleButtonTextHoverColor: $textColor;
+$toggleButtonIconHoverColor: $textSecondaryColor;
+$toggleButtonActiveBg: $primaryColor;
+$toggleButtonActiveBorderColor: $primaryColor;
+$toggleButtonTextActiveColor: $primaryTextColor;
+$toggleButtonIconActiveColor: $primaryTextColor;
+$toggleButtonActiveHoverBg: $primaryDarkColor;
+$toggleButtonActiveHoverBorderColor: $primaryDarkColor;
+$toggleButtonTextActiveHoverColor: $primaryTextColor;
+$toggleButtonIconActiveHoverColor: $primaryTextColor;
+
+// Speed Dial
+$speedDialButtonWidth: 4rem;
+$speedDialButtonHeight: 4rem;
+$speedDialButtonIconFontSize: 1.3rem;
+$speedDialActionWidth: 3rem;
+$speedDialActionHeight: 3rem;
+$speedDialActionBg: #495057;
+$speedDialActionHoverBg: #343a40;
+$speedDialActionTextColor: #fff;
+$speedDialActionTextHoverColor: #fff;
+
+// Data
+
+// Paginator
+$paginatorBg: #ffffff;
+$paginatorTextColor: $textSecondaryColor;
+$paginatorBorder: solid #e9ecef;
+$paginatorBorderWidth: 0;
+$paginatorPadding: 0.5rem 1rem;
+$paginatorElementWidth: $buttonIconOnlyWidth;
+$paginatorElementHeight: $buttonIconOnlyWidth;
+$paginatorElementBg: transparent;
+$paginatorElementBorder: 0 none;
+$paginatorElementIconColor: $textSecondaryColor;
+$paginatorElementHoverBg: #e9ecef;
+$paginatorElementHoverBorderColor: transparent;
+$paginatorElementIconHoverColor: $textSecondaryColor;
+$paginatorElementBorderRadius: $borderRadius;
+$paginatorElementMargin: 0.143rem;
+$paginatorElementPadding: 0;
+
+// tableHeader
+$tableHeaderBorder: 1px solid #e9ecef;
+$tableHeaderBorderWidth: 0 0 1px 0;
+$tableHeaderBg: #f8f9fa;
+$tableHeaderTextColor: $textColor;
+$tableHeaderFontWeight: 600;
+$tableHeaderPadding: 1rem 1rem;
+$tableHeaderCellPadding: 1rem 1rem;
+$tableHeaderCellBg: #f8f9fa;
+$tableHeaderCellTextColor: $textColor;
+$tableHeaderCellFontWeight: 600;
+$tableHeaderCellBorder: 1px solid #e9ecef;
+$tableHeaderCellBorderWidth: 0 0 1px 0;
+$tableHeaderCellHoverBg: #e9ecef;
+$tableHeaderCellTextHoverColor: $textColor;
+$tableHeaderCellIconColor: $textSecondaryColor;
+$tableHeaderCellIconHoverColor: $textSecondaryColor;
+$tableHeaderCellHighlightBg: #f8f9fa;
+$tableHeaderCellHighlightTextColor: $primaryColor;
+$tableHeaderCellHighlightHoverBg: #e9ecef;
+$tableHeaderCellHighlightTextHoverColor: $primaryColor;
+// tableSort
+$tableSortableColumnBadgeSize: 1.143rem;
+
+// tableBody
+$tableBodyRowBg: #ffffff;
+$tableBodyRowTextColor: $textColor;
+$tableBodyRowEvenBg: #ffffff;
+$tableBodyRowHoverBg: #e9ecef;
+$tableBodyRowTextHoverColor: $textColor;
+$tableBodyCellBorder: 1px solid rgba(0, 0, 0, 0.08);
+$tableBodyCellBorderWidth: 0 0 1px 0;
+$tableBodyCellPadding: 1rem 1rem;
+
+// tableFooter
+$tableFooterCellPadding: 1rem 1rem;
+$tableFooterCellBg: #f8f9fa;
+$tableFooterCellTextColor: $textColor;
+$tableFooterCellFontWeight: 600;
+$tableFooterCellBorder: 1px solid #e9ecef;
+$tableFooterCellBorderWidth: 0 0 1px 0;
+$tableResizerHelperBg: $primaryColor;
+$tableFooterBorder: 1px solid #e9ecef;
+$tableFooterBorderWidth: 0 0 1px 0;
+$tableFooterBg: #f8f9fa;
+$tableFooterTextColor: $textColor;
+$tableFooterFontWeight: 600;
+$tableFooterPadding: 1rem 1rem;
+$tableCellContentAlignment: left;
+$tableTopPaginatorBorderWidth: 1px 0 1px 0;
+$tableBottomPaginatorBorderWidth: 0 0 1px 0;
+
+// tableScale
+$tableScaleSM: 0.5;
+$tableScaleLG: 1.25;
+
+// dataView
+$dataViewContentPadding: 0;
+$dataViewContentBorder: 0 none;
+$dataViewListItemBorder: solid #e9ecef;
+$dataViewListItemBorderWidth: 0 0 1px 0;
+$orderListBreakpoint: 769px;
+$pickListBreakpoint: 769px;
+
+// fullCalendar
+$fullCalendarEventBg: $primaryDarkColor;
+$fullCalendarEventBorderColor: $primaryDarkColor;
+$fullCalendarEventBorder: 1px solid $primaryDarkColor;
+$fullCalendarEventTextColor: $primaryTextColor;
+
+// treeContainer
+$treeContainerPadding: 0.286rem;
+$treeNodePadding: 0.143rem;
+$treeNodeContentPadding: 0.5rem;
+$treeNodeChildrenPadding: 0 0 0 1rem;
+$treeNodeIconColor: $textSecondaryColor;
+
+// Timeline
+$timelineVerticalEventContentPadding: 0 1rem;
+$timelineHorizontalEventContentPadding: 1rem 0;
+$timelineEventMarkerWidth: 1rem;
+$timelineEventMarkerHeight: 1rem;
+$timelineEventMarkerBorderRadius: 50%;
+$timelineEventMarkerBorder: 2px solid $highlightBg;
+$timelineEventMarkerBackground: $highlightTextColor;
+$timelineEventConnectorSize: 2px;
+$timelineEventColor: #dee2e6;
+$organizationChartConnectorColor: #dee2e6;
+
+// FORM
+
+// Input
+$inputPadding: 0.5rem 0.5rem;
+$inputBg: #ffffff;
+$inputTextFontSize: 1rem;
+$inputTextColor: $textColor;
+$inputIconColor: $textColor;
+$inputBorder: 1px solid #ced4da;
+$inputHoverBorderColor: $primaryColor;
+$inputFocusBorderColor: $primaryColor;
+$inputErrorBorderColor: #ced4da #ced4da #ced4da $errorColor;
+$inputPlaceholderTextColor: #6c757d;
+$inputFilledBg: #f8f9fa;
+$inputFilledHoverBg: #f8f9fa;
+$inputFilledFocusBg: #f8f9fa;
+$inputGroupBg: #e9ecef;
+$inputGroupTextColor: $textSecondaryColor;
+$inputGroupAddOnMinWidth: 2.357rem;
+
+// inputList
+$inputListBg: #ffffff;
+$inputListTextColor: $textColor;
+$inputListBorder: $inputBorder;
+$inputListPadding: 0.5rem 0;
+$inputListItemPadding: 0.5rem 1rem;
+$inputListItemBg: transparent;
+$inputListItemTextColor: $textColor;
+$inputListItemHoverBg: #e9ecef;
+$inputListItemTextHoverColor: $textColor;
+$inputListItemBorder: 0 none;
+$inputListItemBorderRadius: 0;
+$inputListItemMargin: 0;
+$inputListItemFocusShadow: inset 0 0 0 0.15rem $focusOutlineColor;
+$inputListHeaderPadding: 0.5rem 1rem;
+$inputListHeaderMargin: 0;
+$inputListHeaderBg: #f8f9fa;
+$inputListHeaderTextColor: $textColor;
+$inputListHeaderBorder: 0 none;
+
+// inputOverlay
+$inputOverlayBg: $inputListBg;
+$inputOverlayHeaderBg: $inputListHeaderBg;
+$inputOverlayBorder: 0 none;
+$inputOverlayShadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+
+// Checkbox
+$checkboxWidth: 20px;
+$checkboxHeight: 20px;
+$checkboxBorder: 2px solid #ced4da;
+$checkboxIconFontSize: 14px;
+$checkboxActiveBorderColor: $primaryColor;
+$checkboxActiveBg: $primaryColor;
+$checkboxIconActiveColor: $primaryTextColor;
+$checkboxActiveHoverBg: $primaryDarkerColor;
+$checkboxIconActiveHoverColor: $primaryTextColor;
+$checkboxActiveHoverBorderColor: $primaryDarkerColor;
+
+// Radiobutton
+$radiobuttonWidth: 20px;
+$radiobuttonHeight: 20px;
+$radiobuttonBorder: 2px solid #ced4da;
+$radiobuttonIconSize: 12px;
+$radiobuttonActiveBorderColor: $primaryColor;
+$radiobuttonActiveBg: $primaryColor;
+$radiobuttonIconActiveColor: $primaryTextColor;
+$radiobuttonActiveHoverBg: $primaryDarkerColor;
+$radiobuttonIconActiveHoverColor: $primaryTextColor;
+$radiobuttonActiveHoverBorderColor: $primaryDarkerColor;
+
+// Colorpicker
+$colorPickerPreviewWidth: 2rem;
+$colorPickerPreviewHeight: 2rem;
+$colorPickerBg: #323232;
+$colorPickerBorder: 1px solid #191919;
+$colorPickerHandleColor: #ffffff;
+
+// Rating
+$ratingIconFontSize: 1.143rem;
+$ratingCancelIconColor: #e74c3c;
+$ratingCancelIconHoverColor: #c0392b;
+$ratingStarIconOffColor: $textColor;
+$ratingStarIconOnColor: $primaryColor;
+$ratingStarIconHoverColor: $primaryColor;
+
+// Slider
+$sliderBg: #dee2e6;
+$sliderBorder: 0 none;
+$sliderHorizontalHeight: 0.286rem;
+$sliderVerticalWidth: 0.286rem;
+$sliderHandleWidth: 1.143rem;
+$sliderHandleHeight: 1.143rem;
+$sliderHandleBg: #ffffff;
+$sliderHandleBorder: 2px solid $primaryColor;
+$sliderHandleBorderRadius: 50%;
+$sliderHandleHoverBorderColor: $primaryColor;
+$sliderHandleHoverBg: $primaryColor;
+$sliderRangeBg: $primaryColor;
+
+// Calendar
+$calendarTableMargin: 0.5rem 0;
+$calendarPadding: 0.5rem;
+$calendarBg: #ffffff;
+$calendarInlineBg: $calendarBg;
+$calendarTextColor: $textColor;
+$calendarBorder: $inputListBorder;
+$calendarOverlayBorder: $inputOverlayBorder;
+$calendarHeaderPadding: 0.5rem;
+$calendarHeaderBg: #ffffff;
+$calendarInlineHeaderBg: $calendarBg;
+$calendarHeaderBorder: 1px solid #dee2e6;
+$calendarHeaderTextColor: $textColor;
+$calendarHeaderFontWeight: 600;
+$calendarHeaderCellPadding: 0.5rem;
+$calendarMonthYearHeaderHoverTextColor: $primaryColor !default;
+$calendarCellDatePadding: 0.5rem;
+$calendarCellDateWidth: 2.5rem;
+$calendarCellDateHeight: 2.5rem;
+$calendarCellDateBorderRadius: 50%;
+$calendarCellDateBorder: 1px solid transparent;
+$calendarCellDateHoverBg: #e9ecef;
+$calendarCellDateTodayBg: #ced4da;
+$calendarCellDateTodayBorderColor: transparent;
+$calendarCellDateTodayTextColor: $textColor;
+$calendarButtonBarPadding: 1rem 0;
+$calendarTimePickerPadding: 0.5rem;
+$calendarTimePickerElementPadding: 0 0.429rem;
+$calendarTimePickerTimeFontSize: 1.286rem;
+$calendarBreakpoint: 769px;
+$calendarCellDatePaddingSM: 0;
+
+// Switch
+$inputSwitchWidth: 3rem;
+$inputSwitchHeight: 1.75rem;
+$inputSwitchBorderRadius: 30px;
+$inputSwitchHandleWidth: 1.25rem;
+$inputSwitchHandleHeight: 1.25rem;
+$inputSwitchHandleBorderRadius: 50%;
+$inputSwitchSliderPadding: 0.25rem;
+$inputSwitchSliderOffBg: #ced4da;
+$inputSwitchHandleOffBg: #ffffff;
+$inputSwitchSliderOffHoverBg: #c3cad2;
+$inputSwitchSliderOnBg: $primaryColor;
+$inputSwitchSliderOnHoverBg: $primaryDarkColor;
+$inputSwitchHandleOnBg: #ffffff;
+
+// Password
+$passwordMeterBg: #dee2e6;
+$passwordWeakBg: #e53935;
+$passwordMediumBg: #ffb300;
+$passwordStrongBg: #43a047;
+
+// Input
+$fileUploadProgressBarHeight: 0.25rem;
+$fileUploadContentPadding: 2rem 1rem;
+$editorToolbarBg: #f8f9fa;
+$editorToolbarBorder: 1px solid #dee2e6;
+$editorToolbarPadding: 1rem;
+$editorToolbarIconColor: #6c757d;
+$editorToolbarIconHoverColor: #495057;
+$editorIconActiveColor: $primaryColor;
+$editorContentBorder: 1px solid #dee2e6;
+$editorContentBg: #ffffff;
+
+// Media
+$carouselIndicatorsPadding: 1rem;
+$carouselIndicatorBg: #e9ecef;
+$carouselIndicatorHoverBg: #dee2e6;
+$carouselIndicatorBorderRadius: 0;
+$carouselIndicatorWidth: 2rem;
+$carouselIndicatorHeight: 0.5rem;
+$galleriaMaskBg: rgba(0, 0, 0, 0.9);
+$galleriaCloseIconMargin: 0.5rem;
+$galleriaCloseIconFontSize: 2rem;
+$galleriaCloseIconBg: transparent;
+$galleriaCloseIconColor: #ebedef;
+$galleriaCloseIconHoverBg: rgba(255, 255, 255, 0.1);
+$galleriaCloseIconHoverColor: #ebedef;
+$galleriaCloseIconWidth: 4rem;
+$galleriaCloseIconHeight: 4rem;
+$galleriaCloseIconBorderRadius: 50%;
+$galleriaItemNavigatorBg: rgba(0, 0, 0, 0.2);
+$galleriaItemNavigatorColor: #aeb6bf;
+$galleriaItemNavigatorMargin: 0.5rem 0;
+$galleriaItemNavigatorFontSize: 2rem;
+$galleriaItemNavigatorHoverBg: rgba(0, 0, 0, 0.3);
+$galleriaItemNavigatorHoverColor: #ebedef;
+$galleriaItemNavigatorWidth: 4rem;
+$galleriaItemNavigatorHeight: 4rem;
+$galleriaItemNavigatorBorderRadius: $borderRadius;
+$galleriaCaptionBg: rgba(0, 0, 0, 0.5);
+$galleriaCaptionTextColor: #ebedef;
+$galleriaCaptionPadding: 1rem;
+$galleriaIndicatorsPadding: 1rem;
+$galleriaIndicatorBg: #e9ecef;
+$galleriaIndicatorHoverBg: #dee2e6;
+$galleriaIndicatorBorderRadius: 50%;
+$galleriaIndicatorWidth: 1rem;
+$galleriaIndicatorHeight: 1rem;
+$galleriaIndicatorsBgOnItem: rgba(0, 0, 0, 0.5);
+$galleriaIndicatorBgOnItem: rgba(255, 255, 255, 0.4);
+$galleriaIndicatorHoverBgOnItem: rgba(255, 255, 255, 0.6);
+$galleriaThumbnailContainerBg: rgba(0, 0, 0, 0.9);
+$galleriaThumbnailContainerPadding: 1rem 0.25rem;
+$galleriaThumbnailNavigatorBg: transparent;
+$galleriaThumbnailNavigatorColor: #aeb6bf;
+$galleriaThumbnailNavigatorHoverBg: rgba(255, 255, 255, 0.1);
+$galleriaThumbnailNavigatorHoverColor: #aeb6bf;
+$galleriaThumbnailNavigatorBorderRadius: 50%;
+$galleriaThumbnailNavigatorWidth: 2rem;
+$galleriaThumbnailNavigatorHeight: 2rem;
+$imageMaskBg: rgba(0, 0, 0, 0.9) !default;
+$imagePreviewToolbarPadding: 1rem !default;
+$imagePreviewIndicatorColor: #f8f9fa !default;
+$imagePreviewIndicatorBg: rgba(0, 0, 0, 0.5) !default;
+$imagePreviewActionIconBg: transparent !default;
+$imagePreviewActionIconColor: #f8f9fa !default;
+$imagePreviewActionIconHoverBg: rgba(255, 255, 255, 0.1) !default;
+$imagePreviewActionIconHoverColor: #f8f9fa !default;
+$imagePreviewActionIconWidth: 3rem !default;
+$imagePreviewActionIconHeight: 3rem !default;
+$imagePreviewActionIconFontSize: 1.5rem !default;
+$imagePreviewActionIconBorderRadius: 50% !default;
+
+// Menu
+$stepsItemBg: #ffffff;
+$stepsItemBorder: 1px solid #c8c8c8;
+$stepsItemTextColor: $textSecondaryColor;
+$stepsItemNumberWidth: 2rem;
+$stepsItemNumberHeight: 2rem;
+$stepsItemNumberFontSize: 1.143rem;
+$stepsItemNumberColor: $textColor;
+$stepsItemNumberBorderRadius: 50%;
+$stepsItemActiveFontWeight: 600;
+$menuWidth: 12.5rem;
+$menuBg: #ffffff;
+$menuBorder: 1px solid #dee2e6;
+$menuTextColor: $textColor;
+$menuitemPadding: 0.75rem 1rem;
+$menuitemBorderRadius: 0;
+$menuitemTextColor: $textColor;
+$menuitemIconColor: $textSecondaryColor;
+$menuitemTextHoverColor: $textColor;
+$menuitemIconHoverColor: $textSecondaryColor;
+$menuitemHoverBg: #e9ecef;
+$menuitemTextActiveColor: $textColor;
+$menuitemIconActiveColor: $textSecondaryColor;
+$menuitemActiveBg: #e9ecef;
+$menuitemSubmenuIconFontSize: 0.875rem;
+$submenuHeaderMargin: 0;
+$submenuHeaderPadding: 0.75rem 1rem;
+$submenuHeaderBg: #ffffff;
+$submenuHeaderTextColor: $textColor;
+$submenuHeaderBorderRadius: 0;
+$submenuHeaderFontWeight: 600;
+$overlayMenuBg: $menuBg;
+$overlayMenuBorder: 0 none;
+$overlayMenuShadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+$verticalMenuPadding: 0.25rem 0;
+$verticalMenuitemMargin: 0;
+$menuSeparatorMargin: 0.25rem 0;
+$breadcrumbPadding: 1rem;
+$breadcrumbBg: $menuBg;
+$breadcrumbBorder: $menuBorder;
+$breadcrumbItemTextColor: $menuitemTextColor;
+$breadcrumbItemIconColor: $menuitemIconColor;
+$breadcrumbLastItemTextColor: $menuitemTextColor;
+$breadcrumbLastItemIconColor: $menuitemIconColor;
+$breadcrumbSeparatorColor: $menuitemTextColor;
+$horizontalMenuPadding: 0.5rem;
+$horizontalMenuBg: #f8f9fa;
+$horizontalMenuBorder: $menuBorder;
+$horizontalMenuTextColor: $menuTextColor;
+$horizontalMenuRootMenuitemPadding: $menuitemPadding;
+$horizontalMenuRootMenuitemBorderRadius: $borderRadius;
+$horizontalMenuRootMenuitemTextColor: $menuitemTextColor;
+$horizontalMenuRootMenuitemIconColor: $menuitemIconColor;
+$horizontalMenuRootMenuitemTextHoverColor: $menuitemTextHoverColor;
+$horizontalMenuRootMenuitemIconHoverColor: $menuitemIconHoverColor;
+$horizontalMenuRootMenuitemHoverBg: $menuitemHoverBg;
+$horizontalMenuRootMenuitemTextActiveColor: $menuitemTextActiveColor;
+$horizontalMenuRootMenuitemIconActiveColor: $menuitemIconActiveColor;
+$horizontalMenuRootMenuitemActiveBg: $menuitemActiveBg;
+$dockActionWidth: 4rem;
+$dockActionHeight: 4rem;
+$dockItemPadding: 0.5rem;
+$dockCurrentItemMargin: 1.5rem;
+$dockFirstItemsMargin: 1.3rem;
+$dockSecondItemsMargin: 0.9rem;
+$dockBg: rgba(255, 255, 255, 0.1);
+$dockBorder: 1px solid rgba(255, 255, 255, 0.2);
+$dockPadding: 0.5rem 0.5rem;
+$dockBorderRadius: 0.5rem;
+
+// Message
+$messageMargin: 1rem 0;
+$messagePadding: 1rem 1.5rem;
+$messageBorderWidth: 0 0 0 4px;
+$messageIconFontSize: 1.5rem;
+$messageTextFontSize: 1rem;
+$messageTextFontWeight: 500;
+$inlineMessagePadding: $inputPadding;
+$inlineMessageMargin: 0;
+$inlineMessageIconFontSize: 1rem;
+$inlineMessageTextFontSize: 1rem;
+$inlineMessageBorderWidth: 1px;
+$toastIconFontSize: 2rem;
+$toastMessageTextMargin: 0 0 0 1rem;
+$toastMargin: 0 0 1rem 0;
+$toastPadding: 1rem;
+$toastBorderWidth: 0 0 0 4px;
+$toastShadow: 0 3px 14px 0 rgba(0, 0, 0, 0.3);
+$toastOpacity: 0.9;
+$toastTitleFontWeight: 700;
+$toastDetailMargin: $inlineSpacing 0 0 0;
+$infoMessageBg: #039be5;
+$infoMessageBorder: solid #027cb7;
+$infoMessageTextColor: #ffffff;
+$infoMessageIconColor: #ffffff;
+$successMessageBg: #43a047;
+$successMessageBorder: 0 none;
+$successMessageTextColor: #ffffff;
+$successMessageIconColor: #ffffff;
+$warningMessageBg: #ffb300;
+$warningMessageBorder: 0 none;
+$warningMessageTextColor: $textColor;
+$warningMessageIconColor: $textColor;
+$errorMessageBg: #e53935;
+$errorMessageBorder: 0 none;
+$errorMessageTextColor: #ffffff;
+$errorMessageIconColor: #ffffff;
+
+// Misc
+$inplacePadding: $inputPadding;
+$inplaceHoverBg: #e9ecef;
+$inplaceTextHoverColor: $textColor;
+$badgeBg: $primaryColor;
+$badgeTextColor: $primaryTextColor;
+$badgeMinWidth: 1.5rem;
+$badgeHeight: 1.5rem;
+$badgeFontWeight: 700;
+$badgeFontSize: 0.75rem;
+$tagPadding: 0.25rem 0.4rem;
+$progressBarHeight: 1.5rem;
+$progressBarBorder: 0 none;
+$progressBarBg: #dee2e6;
+$progressBarValueBg: $primaryColor;
+$progressBarValueTextColor: $primaryTextColor;
+$avatarBg: #dee2e6;
+$avatarTextColor: $textColor;
+$chipBg: #dee2e6;
+$chipTextColor: $textColor;
+$chipBorderRadius: 16px;
+$scrollTopBg: rgba(0, 0, 0, 0.7);
+$scrollTopHoverBg: rgba(0, 0, 0, 0.8);
+$scrollTopWidth: 3rem;
+$scrollTopHeight: 3rem;
+$scrollTopBorderRadius: 50%;
+$scrollTopFontSize: 1.5rem;
+$scrollTopTextColor: #f8f9fa;
+$skeletonBg: #e9ecef;
+$skeletonAnimationBg: rgba(255, 255, 255, 0.4);
+
+//Panel
+$panelHeaderBorderColor: #dee2e6;
+$panelHeaderBorder: 1px solid #dee2e6;
+$panelHeaderBg: #f8f9fa;
+$panelHeaderTextColor: $textColor;
+$panelHeaderFontWeight: 600;
+$panelHeaderPadding: 1rem;
+$panelToggleableHeaderPadding: 0.5rem 1rem;
+$panelHeaderHoverBg: #e9ecef;
+$panelHeaderHoverBorderColor: #dee2e6;
+$panelHeaderTextHoverColor: #495057;
+$panelContentBorderColor: #dee2;
+$panelContentBorder: 1px solid #dee2e6;
+$panelContentBg: #ffffff;
+$panelContentTextColor: $textColor;
+$panelContentPadding: 1rem;
+$panelFooterBorder: 1px solid #dee2e6;
+$panelFooterBg: #ffffff;
+$panelFooterTextColor: $textColor;
+$panelFooterPadding: 0.5rem 1rem;
+$accordionSpacing: 0;
+$accordionHeaderBorder: $panelHeaderBorder;
+$accordionHeaderBg: $panelHeaderBg;
+$accordionHeaderTextColor: $panelHeaderTextColor;
+$accordionHeaderFontWeight: $panelHeaderFontWeight;
+$accordionHeaderPadding: $panelHeaderPadding;
+$accordionHeaderHoverBg: #e9ecef;
+$accordionHeaderHoverBorderColor: $panelHeaderBorder;
+$accordionHeaderTextHoverColor: $textColor;
+$accordionHeaderActiveBg: $panelHeaderBg;
+$accordionHeaderActiveBorderColor: #dee2e6;
+$accordionHeaderTextActiveColor: $textColor;
+$accordionHeaderActiveHoverBg: #e9ecef;
+$accordionHeaderActiveHoverBorderColor: #dee2e6;
+$accordionHeaderTextActiveHoverColor: $textColor;
+$accordionContentBorder: $panelContentBorder;
+$accordionContentBg: $panelContentBg;
+$accordionContentTextColor: $panelContentTextColor;
+$accordionContentPadding: $panelContentPadding;
+$tabviewNavBorder: 1px solid #dee2e6;
+$tabviewNavBorderWidth: 0 0 2px 0;
+$tabviewNavBg: #ffffff;
+$tabviewHeaderSpacing: 0;
+$tabviewHeaderBorder: solid #dee2e6;
+$tabviewHeaderBorderWidth: 0 0 2px 0;
+$tabviewHeaderBorderColor: transparent transparent #dee2e6 transparent;
+$tabviewHeaderBg: #ffffff;
+$tabviewHeaderTextColor: $textSecondaryColor;
+$tabviewHeaderFontWeight: $panelHeaderFontWeight;
+$tabviewHeaderPadding: $panelHeaderPadding;
+$tabviewHeaderMargin: 0 0 -2px 0;
+$tabviewHeaderHoverBg: #ffffff;
+$tabviewHeaderHoverBorderColor: #9ba2aa;
+$tabviewHeaderTextHoverColor: $textSecondaryColor;
+$tabviewHeaderActiveBg: #ffffff;
+$tabviewHeaderActiveBorderColor: $primaryColor;
+$tabviewHeaderTextActiveColor: $primaryColor;
+$tabviewContentBorder: 0 none;
+$tabviewContentBg: $panelContentBg;
+$tabviewContentTextColor: $panelContentTextColor;
+$tabviewContentPadding: $panelContentPadding;
+$panelHeaderHoverBg: #e9ecef;
+$panelHeaderHoverBorderColor: #dee2e6;
+$panelHeaderTextHoverColor: $textColor;
+$scrollPanelTrackBorder: 0 none;
+$scrollPanelTrackBg: #f8f9fa;
+
+// Card
+$cardBodyPadding: 1.5rem;
+$cardTitleFontSize: 1.25rem;
+$cardTitleFontWeight: 500;
+$cardSubTitleFontWeight: 300;
+$cardSubTitleColor: $textSecondaryColor;
+$cardContentPadding: 1rem 0;
+$cardFooterPadding: 1rem 0 0 0;
+$cardShadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+// Divider
+$dividerHorizontalMargin: 1rem 0;
+$dividerHorizontalPadding: 0 1rem;
+$dividerVerticalMargin: 0 1rem;
+$dividerVerticalPadding: 1rem 0;
+$dividerSize: 1px;
+$dividerColor: #dee2e6;
+
+// Splitter
+$splitterGutterBg: #f8f9fa;
+$splitterGutterHandleBg: #dee2e6;
+
+// Orverlay Panel
+$overlayContentBorder: 0 none;
+$overlayContentBg: $panelContentBg;
+$overlayContainerShadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
+  0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+
+// Dialog
+$dialogHeaderBg: #ffffff;
+$dialogHeaderBorder: 0 none;
+$dialogHeaderTextColor: $panelHeaderTextColor;
+$dialogHeaderFontWeight: 600;
+$dialogHeaderFontSize: 1.25rem;
+$dialogHeaderPadding: 1.5rem;
+$dialogContentPadding: 0 1.5rem 2rem 1.5rem;
+$dialogFooterBorder: 0 none;
+$dialogFooterPadding: 0 1.5rem 1.5rem 1.5rem;
+
+// Tooltip
+$tooltipBg: $textColor;
+$tooltipTextColor: #ffffff;
+$tooltipPadding: $inputPadding;

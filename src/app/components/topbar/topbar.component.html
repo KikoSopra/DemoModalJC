@@ -1,0 +1,49 @@
+<div class="layout-topbar">
+    <a
+      class="p-link layout-menu-button layout-topbar-button">
+      <i class="pi pi-bars"></i>
+    </a>
+  
+    <a class="layout-topbar-logo" routerLink="">
+      <img src="assets/layout/images/logo.svg" alt="logo" />
+    </a>
+  
+    <a
+      class="p-link layout-topbar-menu-button layout-topbar-button">
+      <i class="pi pi-ellipsis-v"></i>
+    </a>
+    <div></div>
+    <div
+      class="layout-topbar-menu">
+      <p-dropdown        
+        [options]="languages"
+        optionLabel="name"
+        placeholder="Seleccione el Idioma">
+        <ng-template pTemplate="selectedItem">
+          <div class="country-item country-item-value" *ngIf="selectedlLanguage">
+            <span
+              ><img [src]="selectedlLanguage.flag" width="15px" alt="iconFlag"
+            /></span>
+          </div>
+        </ng-template>
+        <ng-template let-languages pTemplate="item">
+          <div class="country-item">
+            <img [src]="languages.flag" width="15px" alt="iconFlag" />
+          </div>
+        </ng-template>
+      </p-dropdown>
+      <a class="p-link layout-topbar-button" [routerLink]="['/modal']">
+        <i class="pi pi-align-left"></i>
+        <span>Modal 1</span> 
+      </a>
+      <a class="p-link layout-topbar-button" [routerLink]="['/modal2']">
+        <i class="pi pi-align-justify"></i>
+        <span>Modal 2</span>
+      </a>
+      <a class="p-link layout-topbar-button" [routerLink]="['/modal3']">
+        <i class="pi pi-align-right"></i>
+        <span>Modal 3</span>
+      </a>
+    </div>
+  </div>
+  

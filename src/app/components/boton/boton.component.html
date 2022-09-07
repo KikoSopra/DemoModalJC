@@ -1,0 +1,23 @@
+<div class="botones card">
+  <button
+    pButton
+    type="button"
+    (click)="showResponsiveDialog()"
+    icon="pi pi-external-link"
+    label="Modal 1"
+    class="p-button-danger"
+  ></button>
+</div>
+
+<!-- <button pButton type="button" label="Danger" class="p-button-danger"></button> -->
+
+<p-dialog
+  [(visible)]="display"
+  [draggable]="false"
+  header="Prueba dialogo"
+  [transitionOptions]="'200ms'"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ width: '70vw' }"
+>
+  <app-tabla></app-tabla>
+</p-dialog>
